@@ -31,7 +31,7 @@ html {
 body {
     display: grid;
     place-items: center;
-    padding: 1rem 0;
+    padding: 4rem 0;
     min-height: 100vh;
     background-color: var(--Background-headings-buttons);  
     margin: 0;
