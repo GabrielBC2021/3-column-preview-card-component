@@ -1,0 +1,201 @@
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+:root {
+    /* Fonts */
+    --Primary-font: 'Lexend Deca', sans-serif;
+    --Heading-font: 'Big Shoulders Display', cursive;
+
+    /* Primary colors */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral colors */
+    --Paragraphs-color: hsla(0, 0%, 100%, 0.75);
+    --Background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body */
+body {
+    display: grid;
+    place-items: center;
+    padding: 1rem 0;
+    min-height: 100vh;
+    background-color: var(--Background-headings-buttons);  
+    margin: 0;
+}
+
+/* 3-Columns */
+.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    
+}
+
+/* First column properties */
+.first-column {
+    background-color: var(--Bright-orange);
+    border-radius: .5rem .5rem 0 0;
+    padding: 3rem 3rem 2.5rem 2.5rem;
+}
+
+.first-column__heading {
+    color: var(--Background-headings-buttons);
+    font-family: var(--Heading-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.first-column__paragraph {
+    font-family: var(--Primary-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2rem;
+    text-align: left;
+    color: var(--Paragraphs-color);
+    padding-bottom: 3rem;
+}
+
+.first-column__button {
+    background-color: var(--Background-headings-buttons);
+    color: var(--Bright-orange);
+    font-family: var(--Primary-font);
+    font-weight: bold;
+    font-size: 13px;
+    padding: .8rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+}
+
+/* Second column properties */
+.second-column {
+    background-color: var(--Dark-cyan);
+    padding: 3rem 3rem 2.5rem 2.5rem;
+}
+
+.second-column__heading {
+    color: var(--Background-headings-buttons);
+    font-family: var(--Heading-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.second-column__paragraph {
+    font-family: var(--Primary-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2rem;
+    text-align: left;
+    color: var(--Paragraphs-color);
+    padding-bottom: 3rem;
+}
+
+.second-column__button {
+    background-color: var(--Background-headings-buttons);
+    color: var(--Dark-cyan);
+    font-family: var(--Primary-font);
+    font-weight: bold;
+    font-size: 13px;
+    padding: .8rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+}
+
+/* Third column properties */
+.third-column {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 .5rem .5rem;
+    padding: 3rem 3rem 2.5rem 2.5rem;
+}
+
+.third-column__heading {
+    color: var(--Background-headings-buttons);
+    font-family: var(--Heading-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.third-column__paragraph {
+    font-family: var(--Primary-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2rem;
+    text-align: left;
+    color: var(--Paragraphs-color);
+    padding-bottom: 3rem;
+}
+
+.third-column__button {
+    background-color: var(--Background-headings-buttons);
+    color: var(--Very-dark-cyan);
+    font-family: var(--Primary-font);
+    font-weight: bold;
+    font-size: 13px;
+    padding: .8rem 2rem;
+    border: 0;
+    border-radius: 2rem;
+}
+
+/* Hovers */
+.first-column__button:hover {
+    background-color: var(--Bright-orange);
+    color: var(--Background-headings-buttons);
+    border: 3px solid var(--Background-headings-buttons);
+    margin: -5px -5px;
+    cursor: pointer;
+}
+
+.second-column__button:hover {
+    background-color: var(--Dark-cyan);
+    color: var(--Background-headings-buttons);
+    border: 3px solid var(--Background-headings-buttons);
+    margin: -5px -5px;
+    cursor: pointer;
+}
+
+.third-column__button:hover {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Background-headings-buttons);
+    border: 3px solid var(--Background-headings-buttons);
+    margin: -5px -5px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (min-width: 500px) {
+    body {
+        overflow: hidden; /* Hind scrollbar */
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .first-column {
+        border-radius: .5rem 0 0 .5rem;
+    }
+
+    .third-column {
+        border-radius: 0 .5rem .5rem 0;
+    }
+}
